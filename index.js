@@ -10,13 +10,14 @@ const component2 =
   <h1>Esta es la vista DESKTOP y cambiará cuando el ancho sea <u style="background-color: chartreuse;">menor</u> a ${desktopQuerie}</h1>
   <p style="background-color: chartreuse;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iusto eius doloremque vero, eaque necessitatibus repellat culpa incidunt molestias obcaecati rerum praesentium nemo perferendis ex modi labore ad a. Eveniet!</p>
   `;
-const mql = window.matchMedia(`(max-width: ${desktopQuerie})`);
-let mobileView = mql.matches;
 
 function setMainInnerHtml(html) {
   const main = document.getElementById('main');
   main.innerHTML = html;
 }
+
+const mql = window.matchMedia(`(max-width: ${desktopQuerie})`);
+let mobileView = mql.matches;
 
 if (mobileView){
   setMainInnerHtml(component1);
